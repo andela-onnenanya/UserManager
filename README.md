@@ -11,18 +11,16 @@ This application was developed using [ExpressJS](http://expressjs.com/). MongoDB
 ### Installation
 * Start up your terminal (or Command Prompt on Windows OS).
 * Ensure that you've `node` and `docker` installed on your PC.
-* Clone the repository by entering the command `git clone https://github.com/andela-bolajide/UserManager` in the terminal.
+* Clone the repository by entering the command `git clone https://github.com/andela-onnenanya/UserManager` in the terminal.
 * Navigate to the project folder using `cd UserManager` on your terminal (or command prompt)
 * Create a `.env` file in your root directory as described in `.env.sample` file. Variables such as DB_URL (which must be a mongoDB URL) and PORT are defined in the .env file and it is essential you create this file before running the application.
 ```
 PORT=3000
 DB_URL='mongodb://john:doe@localhost:27017/databaseName'
 ```
-* After this, you can then start the server with the command: `docker-compose up`.
-
-### Testing
-To ensure that your installation is successful you'll need to run tests.
-The command: `npm test` makes this possible. It isn't functional right now, but once it's done you'll be notified via the README.
+* After this, you can then start the app with the command: `docker-compose up`.
+* Just navigate to http://localhost:3000/users to see your app running
+* You can manage your database here http://localhost:1234. With this, you can manage your database without writting any code.
 
 ### API Documentation
 The API only has one endpoint which is the `/users` endpoint for saving users to the database. The endpoint works with the HTTP verbs: `POST`, `GET`, `PUT`, `DELETE`.
