@@ -1,5 +1,11 @@
 version: '2.1' # specify docker-compose version
 
+
+# Add volumes for data persitence
+
+volumes:
+  db_data:
+
 # Define the services/containers to be run
 services:
   express: #name of the second service
@@ -14,6 +20,8 @@ services:
 
   database: # name of the third service
     image: mongo # specify image to build container from
+    volumes:
+      - db_data:/data/db
     ports:
       - "27017:27017" # specify port forewarding
 
